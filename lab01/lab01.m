@@ -127,27 +127,18 @@ disp("Task 6");
 %hold on;
 %grid on;
 
-plot3([0; 1],[0; 0],[0; 0], 'Color', 'r');
-text(1, 0, 0, 'x');
+%q0 = quaternion.create_random_unit();
+%q1 = quaternion.create_random_unit();
 
-plot3([0; 0],[0; 1],[0; 0], 'Color', 'g');
-text(0, 1, 0, 'y');
-
-plot3([0; 0],[0; 0],[0; 1], 'Color', 'b');
-text(0, 0, 1, 'z');
-
-q0 = quaternion.create_random_unit();
-q1 = quaternion.create_random_unit();
-
-steps = 100;
-q_int = quat_slerp(q0, q1, steps);
-for k = 1:steps
-    q = q_int(k, :);
+%steps = 100;
+%q_int = quat_slerp(q0, q1, steps);
+%for k = 1:steps
+%    q = q_int(k, :);
     %disp(q)
-    plot3([q(1), q(2)], [q(1), q(3)], [q(1), q(4)], 'Color', 'red');
-end
-plot3([q0.u0, q0.v(1)], [q0.u0, q0.v(2)], [q0.u0, q0.v(3)], 'Color', 'blue');
-plot3([q1.u0, q1.v(1)], [q1.u0, q1.v(2)], [q1.u0, q1.v(3)], 'Color', 'green');
+%    plot3([q(1), q(2)], [q(1), q(3)], [q(1), q(4)], 'Color', 'red');
+%end
+%plot3([q0.u0, q0.v(1)], [q0.u0, q0.v(2)], [q0.u0, q0.v(3)], 'Color', 'blue');
+%plot3([q1.u0, q1.v(1)], [q1.u0, q1.v(2)], [q1.u0, q1.v(3)], 'Color', 'green');
 %hold off;
 
 

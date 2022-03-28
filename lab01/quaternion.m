@@ -54,7 +54,7 @@ classdef quaternion
             elseif isnumeric(obj) && quaternion.isquaternion(other)
                 res = other;
                 res.u0 = obj * res.u0;
-                res.v = obj * other.v;
+                res.v = obj * res.v;
             end
         end 
 
